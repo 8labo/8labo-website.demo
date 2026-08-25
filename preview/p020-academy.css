@@ -14,28 +14,58 @@
   text-wrap:wrap!important;
 }
 
-/* Keep the whole classes area clean; remove the full-width box-shadow/clip-path bands. */
-.p003 #classes{background:#f8fafc!important;overflow:hidden!important}
+/* CLASS & LEVEL and CURRENT CLASSES: clearly separate the two areas without creating stray bands. */
+.p003 #classes{
+  background:#dfeef7!important;
+  overflow:hidden!important;
+  padding-bottom:0!important;
+}
 .p003 #classes>.wrap>.section-head:first-child{
   position:relative!important;
   padding-bottom:18px!important;
 }
 .p003 #classes>.wrap>.section-head[style*="margin-top:70px"]{
   position:relative!important;
+  isolation:isolate!important;
   margin-top:70px!important;
+  margin-bottom:0!important;
   padding-top:64px!important;
-  background:transparent!important;
-  box-shadow:none!important;
-  clip-path:none!important;
-}
-.p003 #classes>.wrap>.class-grid{
-  position:relative!important;
-  margin-top:0!important;
-  padding-top:30px!important;
   padding-bottom:18px!important;
   background:transparent!important;
   box-shadow:none!important;
   clip-path:none!important;
+}
+.p003 #classes>.wrap>.section-head[style*="margin-top:70px"]::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  top:0;
+  bottom:0;
+  left:50%;
+  width:100vw;
+  transform:translateX(-50%);
+  background:#f8fafc;
+}
+.p003 #classes>.wrap>.class-grid{
+  position:relative!important;
+  isolation:isolate!important;
+  margin-top:0!important;
+  padding-top:30px!important;
+  padding-bottom:72px!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  clip-path:none!important;
+}
+.p003 #classes>.wrap>.class-grid::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  top:0;
+  bottom:0;
+  left:50%;
+  width:100vw;
+  transform:translateX(-50%);
+  background:#f8fafc;
 }
 
 /* Desktop: explicitly restore the approved card designs. */
@@ -64,7 +94,7 @@
   .p003 #classes .level-badge{background:#e8f2f9!important;border:1px solid #c3d8e8!important;color:#0a4d82!important}
   .p003 #classes .status-inline{background:#f1f5f9!important;border:1px solid #9eb3c4!important;color:#526b7e!important}
   .p003 #classes .class-card h3{margin:0 0 16px!important;font-size:1.28rem!important;line-height:1.4!important}
-  .p003 #classes .class-info{display:grid!important;grid-template-columns:60px minmax(0,1fr)!important;gap:8px!important;padding:9px 0!important;border-top:1px solid #dfe6ec!important;font-size:.86rem!important;line-height:1.6!important}
+  .p003 #classes .class-info{display:grid!important;grid-template-columns:60px minmax(0,1fr))!important;gap:8px!important;padding:9px 0!important;border-top:1px solid #dfe6ec!important;font-size:.86rem!important;line-height:1.6!important}
   .p003 #classes .class-info b{font-size:.74rem!important;color:#657080!important}
   .p003 #classes .class-info span{display:block!important;width:auto!important;min-width:0!important;margin:0!important;font-size:.86rem!important;line-height:1.6!important}
 }
@@ -77,7 +107,7 @@
   .p003 .academy-reason .section-head .lead .sentence,.p003 .academy-reason .reason-intro span{display:inline!important;white-space:normal!important;margin:0!important}
 
   .p003 #classes>.wrap>.section-head[style*="margin-top:70px"]{margin-top:54px!important;padding-top:48px!important}
-  .p003 #classes>.wrap>.class-grid{padding-top:26px!important;padding-bottom:10px!important}
+  .p003 #classes>.wrap>.class-grid{padding-top:26px!important;padding-bottom:54px!important}
 
   .p003 #classes .level-grid{display:grid!important;grid-template-columns:1fr!important;gap:16px!important}
   .p003 #classes .level-card{display:block!important;overflow:hidden!important;background:#fff!important;border:1px solid #b6cbd9!important;border-radius:4px!important;box-shadow:0 8px 22px rgba(7,59,104,.07)!important}
@@ -101,4 +131,4 @@
   .p003 #classes .class-info b{font-size:.74rem!important;color:#657080!important}.p003 #classes .class-info span{display:block!important;width:auto!important;min-width:0!important;margin:0!important;font-size:.86rem!important;line-height:1.6!important}
 }
 
-.p003 .preview-badge{font-size:0!important}.p003 .preview-badge:after{content:'PREVIEW P024';font-size:10px!important;font-weight:800;letter-spacing:.08em}
+.p003 .preview-badge{font-size:0!important}.p003 .preview-badge:after{content:'PREVIEW P025';font-size:10px!important;font-weight:800;letter-spacing:.08em}
