@@ -94,7 +94,7 @@
   .p003 #classes .level-badge{background:#e8f2f9!important;border:1px solid #c3d8e8!important;color:#0a4d82!important}
   .p003 #classes .status-inline{background:#f1f5f9!important;border:1px solid #9eb3c4!important;color:#526b7e!important}
   .p003 #classes .class-card h3{margin:0 0 16px!important;font-size:1.28rem!important;line-height:1.4!important}
-  .p003 #classes .class-info{display:grid!important;grid-template-columns:60px minmax(0,1fr))!important;gap:8px!important;padding:9px 0!important;border-top:1px solid #dfe6ec!important;font-size:.86rem!important;line-height:1.6!important}
+  .p003 #classes .class-info{display:grid!important;grid-template-columns:60px minmax(0,1fr)!important;gap:8px!important;padding:9px 0!important;border-top:1px solid #dfe6ec!important;font-size:.86rem!important;line-height:1.6!important}
   .p003 #classes .class-info b{font-size:.74rem!important;color:#657080!important}
   .p003 #classes .class-info span{display:block!important;width:auto!important;min-width:0!important;margin:0!important;font-size:.86rem!important;line-height:1.6!important}
 }
