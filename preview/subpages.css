@@ -1,4 +1,4 @@
-/* P056 — secondary pages only; home and ACADEMY remain untouched. */
+/* P058b — secondary pages only. */
 @import url('./subpages-p049-base.css');
-@import url('./p051-consistency.css');
+@import url('./p051-consistency.css?v=p058b');
 @import url('./subpages-academy-align.css');
