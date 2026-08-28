@@ -1,3 +1,4 @@
-/* P051 — stable subpage base + shared consistency layer */
+/* P056 — secondary pages only; home and ACADEMY remain untouched. */
 @import url('./subpages-p049-base.css');
 @import url('./p051-consistency.css');
+@import url('./subpages-academy-align.css');
