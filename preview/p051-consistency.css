@@ -1,0 +1,14 @@
+/* P051 — cross-page visual consistency */
+.p003 main .kicker{color:#0b5ea8!important}
+.p003 main .academy-reason .kicker,
+.p003 main .renew-contact .kicker,
+.p003 main .featured .kicker,
+.p003 main .about-renew .kicker,
+.p003 main .bizfit-section .kicker{color:#8bc8ff!important}
+@media(max-width:800px){
+  .p003 .site-footer>p:not(.copyright),
+  .p003 .site-footer .academy-footer-main>div>p{white-space:nowrap!important;font-size:12px!important;letter-spacing:-.025em!important}
+  .about-page .sub-hero>.wrap>.kicker{display:block!important;position:relative!important}
+  .about-page .sub-hero>.wrap>.kicker::before,
+  .about-page .sub-hero>.wrap>.kicker::after{content:none!important;display:none!important}
+}
