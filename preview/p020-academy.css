@@ -1,13 +1,51 @@
-/* ACADEMY stylesheet entry point — P036
-   academy.html keeps this stable filename; Academy-specific presentation lives in academy-refactor.css.
-   P036 adds a tightly scoped mobile correction pass for wrapping, vertical density and gallery tone. */
+/* ACADEMY stylesheet entry point — P037
+   Stable import plus a small mobile safety pass.
+   No phrase-level nowrap is used: every text block must remain inside the viewport. */
 @import url('./academy-refactor.css');
+
+/* Prevent any long flex/grid child from forcing horizontal overflow. */
+body.p003 main,
+body.p003 main section,
+body.p003 main .wrap,
+body.p003 main .section-head,
+body.p003 main article,
+body.p003 main p,
+body.p003 main h1,
+body.p003 main h2,
+body.p003 main h3{min-width:0;max-width:100%;box-sizing:border-box}
+
+/* FAQ is intentionally denser than the general card rhythm. */
+body.p003 #faq .faq-list{display:grid;gap:8px!important}
+body.p003 #faq details{margin:0!important}
+body.p003 #faq summary{padding-top:15px!important;padding-bottom:15px!important}
+body.p003 #faq details[open] summary{padding-bottom:8px!important}
+body.p003 #faq details p{margin-top:0!important;margin-bottom:0!important;padding-bottom:15px!important}
 
 @media(max-width:800px){
   body.p003 .academy-renew-hero .academy-photo{order:-1}
 
-  /* Mobile copy: use the available width and avoid awkward early wrapping. */
-  body.p003 .wrap{width:calc(100% - 32px)!important;margin-left:16px!important;margin-right:16px!important}
+  /* Keep the original 12px mobile gutters: this gives Japanese copy enough measure. */
+  body.p003 .wrap{width:calc(100% - 24px)!important;max-width:none!important;margin-left:12px!important;margin-right:12px!important}
+
+  /* Natural Japanese wrapping only. Never keep generated phrases on one line. */
+  body.p003 main .section-head>h2,
+  body.p003 main .section-head>p:last-child,
+  body.p003 .academy-renew-hero h1,
+  body.p003 .academy-renew-hero .wrap>div:first-child>p,
+  body.p003 .need-item,
+  body.p003 .change-card p,
+  body.p003 .program p,
+  body.p003 .reason p,
+  body.p003 #classes .level-body>p:last-child,
+  body.p003 details p,
+  body.p003 .program-supervisor strong,
+  body.p003 .program-supervisor a{
+    white-space:normal!important;
+    word-break:normal!important;
+    overflow-wrap:anywhere!important;
+    line-break:strict!important;
+    max-width:100%!important;
+  }
   body.p003 main .section-head>h2{font-size:clamp(21px,5.35vw,25px)!important;line-height:1.42!important;letter-spacing:-.035em!important}
   body.p003 main .section-head>p:last-child,
   body.p003 .academy-renew-hero .wrap>div:first-child>p,
@@ -16,15 +54,15 @@
   body.p003 .program p,
   body.p003 .reason p,
   body.p003 #classes .level-body>p:last-child,
-  body.p003 details p{font-size:14px!important;line-height:1.72!important;letter-spacing:-.01em!important;word-break:normal!important;overflow-wrap:normal!important;line-break:strict!important}
+  body.p003 details p{font-size:14px!important;line-height:1.72!important;letter-spacing:-.01em!important}
 
-  /* FOR YOUR CHILD: remove the stretched list feeling while keeping each item readable. */
-  body.p003 #needs .section-head{margin-bottom:18px!important}
+  /* FOR YOUR CHILD: readable but not vertically stretched. */
+  body.p003 #needs .section-head{margin-bottom:16px!important}
   body.p003 #needs .need-list{gap:0!important}
-  body.p003 #needs .need-item{padding:11px 0!important;min-height:0!important;line-height:1.62!important}
+  body.p003 #needs .need-item{padding:10px 0!important;min-height:0!important;line-height:1.62!important}
   body.p003 #needs .need-item:before{margin-right:9px!important}
 
-  /* Level cards: slightly wider text area and calmer internal rhythm. */
+  /* Level cards retain usable text width. */
   body.p003 #classes .level-grid{gap:14px!important}
   body.p003 #classes .level-header{padding:14px!important}
   body.p003 #classes .level-body{padding:18px 14px 20px!important}
@@ -32,12 +70,21 @@
   body.p003 #classes .level-target{margin-bottom:12px!important}
   body.p003 #classes .level-body>p:last-child{line-height:1.68!important}
 
-  /* Keep the gallery cohesive when source photos have very different exposure. */
+  /* Program supervision: allow the link and copy to wrap within the phone width. */
+  body.p003 .program-supervisor{min-width:0!important}
+  body.p003 .program-supervisor a{width:auto!important;display:inline!important;justify-self:start!important}
+
+  /* FAQ: closer question-to-question rhythm on phones. */
+  body.p003 #faq .faq-list{gap:6px!important}
+  body.p003 #faq summary{padding-top:13px!important;padding-bottom:13px!important}
+  body.p003 #faq details[open] summary{padding-bottom:7px!important}
+  body.p003 #faq details p{padding-bottom:13px!important;line-height:1.68!important}
+
+  /* Keep the gallery cohesive when source photos have different exposure. */
   body.p003 .academy-activity-photo.cms-photo{position:relative!important;background-color:rgba(24,45,62,.10)!important;background-blend-mode:multiply!important;box-shadow:inset 0 0 0 9999px rgba(255,255,255,.025)!important}
 }
 
 @media(max-width:390px){
-  body.p003 .wrap{width:calc(100% - 28px)!important;margin-left:14px!important;margin-right:14px!important}
   body.p003 main .section-head>h2{font-size:21px!important}
   body.p003 #classes .level-body{padding-left:13px!important;padding-right:13px!important}
 }
