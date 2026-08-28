@@ -1,0 +1,44 @@
+/* P060 — single source of truth for the mobile site header. */
+@media (max-width:800px){
+  body.p003 > header.site-header{
+    height:64px!important;
+    padding:0 20px!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    background:#0a0a0a!important;
+    color:#fff!important;
+    border-bottom:1px solid rgba(255,255,255,.12)!important;
+    position:relative!important;
+    z-index:1000!important;
+    mix-blend-mode:normal!important;
+    isolation:isolate!important;
+  }
+  body.p003 > header.site-header > a.brand{
+    margin:0!important;
+    padding:0!important;
+    font-family:"Noto Sans JP",system-ui,sans-serif!important;
+    font-size:20px!important;
+    font-weight:900!important;
+    line-height:1!important;
+    letter-spacing:.08em!important;
+    color:#fff!important;
+    opacity:1!important;
+    transform:none!important;
+  }
+  body.p003 > header.site-header > button.menu-button{
+    display:block!important;
+    margin:0!important;
+    padding:0!important;
+    background:none!important;
+    border:0!important;
+    font-family:"Noto Sans JP",system-ui,sans-serif!important;
+    font-size:14px!important;
+    font-weight:800!important;
+    line-height:1!important;
+    letter-spacing:.12em!important;
+    color:#fff!important;
+    opacity:1!important;
+    transform:none!important;
+  }
+}
