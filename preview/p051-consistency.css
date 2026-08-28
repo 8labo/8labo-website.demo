@@ -5,10 +5,32 @@
 .p003 main .featured .kicker,
 .p003 main .about-renew .kicker,
 .p003 main .bizfit-section .kicker{color:#8bc8ff!important}
+/* ８LABO uses the full-width ８ everywhere it is visibly branded. */
+.home-page #for-you .heading-unit .kicker,
+.home-page #strength .heading-unit .kicker,
+.home-page .about-renew .heading-unit .kicker,
+.home-page .featured .heading-unit .kicker,
+.about-page .sub-hero>.wrap>.kicker,
+body.p003 .academy-renew-hero .kicker{font-size:0!important}
+.home-page #for-you .heading-unit .kicker::after{content:'FIND YOUR ８LABO'}
+.home-page #strength .heading-unit .kicker::after{content:'WHY ８LABO'}
+.home-page .about-renew .heading-unit .kicker::after{content:'ABOUT ８LABO'}
+.home-page .featured .heading-unit .kicker::after{content:'８LABO ACADEMY'}
+.about-page .sub-hero>.wrap>.kicker::after{content:'ABOUT ８LABO'}
+body.p003 .academy-renew-hero .kicker::after{content:'８LABO ACADEMY'}
+.home-page #for-you .heading-unit .kicker::after,
+.home-page #strength .heading-unit .kicker::after,
+.home-page .about-renew .heading-unit .kicker::after,
+.home-page .featured .heading-unit .kicker::after,
+.about-page .sub-hero>.wrap>.kicker::after,
+body.p003 .academy-renew-hero .kicker::after{display:block;font-size:12px!important;font-weight:800;line-height:1.4;letter-spacing:.16em}
 @media(max-width:800px){
   .p003 .site-footer>p:not(.copyright),
   .p003 .site-footer .academy-footer-main>div>p{white-space:nowrap!important;font-size:12px!important;letter-spacing:-.025em!important}
-  .about-page .sub-hero>.wrap>.kicker{display:block!important;position:relative!important}
-  .about-page .sub-hero>.wrap>.kicker::before,
-  .about-page .sub-hero>.wrap>.kicker::after{content:none!important;display:none!important}
+  .home-page #for-you .heading-unit .kicker::after,
+  .home-page #strength .heading-unit .kicker::after,
+  .home-page .about-renew .heading-unit .kicker::after,
+  .home-page .featured .heading-unit .kicker::after,
+  .about-page .sub-hero>.wrap>.kicker::after,
+  body.p003 .academy-renew-hero .kicker::after{font-size:10px!important;line-height:1.35;letter-spacing:.15em}
 }
