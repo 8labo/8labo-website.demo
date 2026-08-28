@@ -3,6 +3,8 @@
    P037 performs a page-wide mobile text-flow review and tightens FAQ rhythm. */
 @import url('./academy-refactor.css');
 
+body.p003 .preview-badge:after{content:'PREVIEW P037'!important}
+
 @media(max-width:800px){
   body.p003 .academy-renew-hero .academy-photo{order:-1}
 
