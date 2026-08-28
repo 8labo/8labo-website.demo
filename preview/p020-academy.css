@@ -1,5 +1,5 @@
-/* ACADEMY stylesheet entry point — P040
-   Stable import plus focused Academy corrections for text measure, density, photo tone and footer. */
+/* ACADEMY stylesheet entry point — P041
+   Stable import plus focused Academy corrections for text measure, density, photo tone, footer and desktop CTA hierarchy. */
 @import url('./academy-refactor.css');
 
 body.p003 main,
@@ -12,22 +12,27 @@ body.p003 main h1,
 body.p003 main h2,
 body.p003 main h3{min-width:0;max-width:100%;box-sizing:border-box}
 
-/* Program supervision copy uses the full available measure. */
 body.p003 main section:has(.program-supervisor) .section-head{width:100%!important;max-width:none!important}
 body.p003 main section:has(.program-supervisor) .section-head>p:not(.kicker){display:block!important;width:100%!important;max-width:none!important;margin-left:0!important;margin-right:0!important}
 
-/* FAQ follows the same vertical rhythm as FOR YOUR CHILD. */
 body.p003 #faq .faq-list{display:grid!important;gap:0!important;max-width:none!important;width:100%!important;border-top:1px solid var(--academy-line)!important}
 body.p003 #faq details{margin:0!important;padding:10px 0!important;border-top:0!important;border-bottom:1px solid var(--academy-line)!important}
 body.p003 #faq summary{padding:0!important;line-height:1.62!important}
 body.p003 #faq details[open] summary{padding-bottom:7px!important}
 body.p003 #faq details p{margin:0!important;padding:0 0 2px!important}
 
-/* Academy footer: information is intentionally compact, so keep the black area compact too. */
 body.p003 .site-footer{padding-top:28px!important;padding-bottom:22px!important;min-height:0!important}
 body.p003 .site-footer .footer-brand{margin-bottom:6px!important}
-body.p003 .site-footer>p:not(.copyright){margin-top:0!important;margin-bottom:12px!important}
-body.p003 .site-footer .copyright{margin:0!important;text-align:center!important;width:100%!important}
+body.p003 .site-footer .academy-footer-main p{margin-top:0!important;margin-bottom:0!important}
+body.p003 .site-footer .copyright{margin:12px 0 0!important;text-align:center!important;width:100%!important}
+
+/* Desktop: the blue area has one clear action; returning to 8LABO belongs to the footer. */
+body.p003 .academy-trial-cta{background:#fff!important;color:#0b5fa5!important;border-color:#fff!important;padding-left:22px!important;padding-right:22px!important}
+body.p003 .academy-trial-cta:hover{background:#f3f7fa!important;border-color:#f3f7fa!important}
+body.p003 .academy-mobile-top-link{display:none!important}
+body.p003 .academy-footer-main{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:32px!important;max-width:1180px!important;margin:0 auto!important}
+body.p003 .academy-desktop-top-link{display:inline-flex!important;align-items:center!important;color:rgba(255,255,255,.78)!important;text-decoration:none!important;font-size:13px!important;font-weight:600!important;letter-spacing:.01em!important;white-space:nowrap!important}
+body.p003 .academy-desktop-top-link:hover{color:#fff!important}
 
 @media(max-width:800px){
   body.p003 .academy-renew-hero .academy-photo{order:-1}
@@ -97,7 +102,14 @@ body.p003 .site-footer .copyright{margin:0!important;text-align:center!important
   }
 
   body.p003 .site-footer{padding-top:22px!important;padding-bottom:18px!important}
-  body.p003 .site-footer>p:not(.copyright){margin-bottom:10px!important}
+
+  /* Keep the existing smartphone CTA/footer behavior unchanged. */
+  body.p003 .academy-trial-cta{background:initial!important;color:inherit!important;border-color:initial!important;padding-left:initial!important;padding-right:initial!important}
+  body.p003 .academy-mobile-top-link{display:inline-flex!important}
+  body.p003 .academy-footer-main{display:block!important;max-width:none!important;margin:0!important}
+  body.p003 .academy-desktop-top-link{display:none!important}
+  body.p003 .site-footer .academy-footer-main p{margin-bottom:10px!important}
+  body.p003 .site-footer .copyright{margin-top:0!important}
 }
 
 @media(max-width:390px){
