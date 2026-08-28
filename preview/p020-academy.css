@@ -1,36 +1,80 @@
-/* ACADEMY stylesheet entry point — P036
+/* ACADEMY stylesheet entry point — P037
    academy.html keeps this stable filename; Academy-specific presentation lives in academy-refactor.css.
-   P036 adds a tightly scoped mobile correction pass for wrapping, vertical density and gallery tone. */
+   P037 performs a page-wide mobile text-flow review and tightens FAQ rhythm. */
 @import url('./academy-refactor.css');
 
 @media(max-width:800px){
   body.p003 .academy-renew-hero .academy-photo{order:-1}
 
-  /* Mobile copy: use the available width and avoid awkward early wrapping. */
+  /* Mobile canvas: preserve readable margins while giving copy enough width. */
   body.p003 .wrap{width:calc(100% - 32px)!important;margin-left:16px!important;margin-right:16px!important}
-  body.p003 main .section-head>h2{font-size:clamp(21px,5.35vw,25px)!important;line-height:1.42!important;letter-spacing:-.035em!important}
+
+  /* Page-wide Japanese text flow. Prefer phrase-aware wrapping rather than arbitrary character breaks. */
+  body.p003 main .section-head>h2,
+  body.p003 .academy-renew-hero h1,
+  body.p003 .change-card h3,
+  body.p003 .reason h3,
+  body.p003 #classes .level-body h3,
+  body.p003 #classes .class-card h3,
+  body.p003 summary{
+    word-break:auto-phrase!important;
+    overflow-wrap:normal!important;
+    line-break:strict!important;
+    text-wrap:balance!important;
+  }
+
   body.p003 main .section-head>p:last-child,
   body.p003 .academy-renew-hero .wrap>div:first-child>p,
   body.p003 .need-item,
   body.p003 .change-card p,
   body.p003 .program p,
   body.p003 .reason p,
-  body.p003 #classes .level-body>p:last-child,
-  body.p003 details p{font-size:14px!important;line-height:1.72!important;letter-spacing:-.01em!important;word-break:normal!important;overflow-wrap:normal!important;line-break:strict!important}
+  body.p003 .academy-reason .reason-intro,
+  body.p003 #program .results-note,
+  body.p003 #classes .level-body p,
+  body.p003 #classes .class-info span,
+  body.p003 .voice-empty p,
+  body.p003 .academy-voice-quote,
+  body.p003 details p,
+  body.p003 main #classes+section+section .section-head>p:last-child{
+    width:100%!important;
+    max-width:none!important;
+    min-width:0!important;
+    font-size:14px!important;
+    line-height:1.74!important;
+    letter-spacing:0!important;
+    word-spacing:0!important;
+    word-break:auto-phrase!important;
+    overflow-wrap:normal!important;
+    line-break:strict!important;
+    text-wrap:pretty!important;
+  }
 
-  /* FOR YOUR CHILD: remove the stretched list feeling while keeping each item readable. */
-  body.p003 #needs .section-head{margin-bottom:18px!important}
+  body.p003 main .section-head>h2{font-size:clamp(21px,5.35vw,25px)!important;line-height:1.42!important;letter-spacing:-.035em!important}
+
+  /* FOR YOUR CHILD: keep the checklist compact and connected to its heading. */
+  body.p003 #needs .section-head{margin-bottom:16px!important}
   body.p003 #needs .need-list{gap:0!important}
-  body.p003 #needs .need-item{padding:11px 0!important;min-height:0!important;line-height:1.62!important}
+  body.p003 #needs .need-item{padding:10px 0!important;min-height:0!important;line-height:1.6!important}
   body.p003 #needs .need-item:before{margin-right:9px!important}
 
-  /* Level cards: slightly wider text area and calmer internal rhythm. */
+  /* Level cards: use the card width efficiently and keep internal spacing calm. */
   body.p003 #classes .level-grid{gap:14px!important}
   body.p003 #classes .level-header{padding:14px!important}
   body.p003 #classes .level-body{padding:18px 14px 20px!important}
   body.p003 #classes .level-body h3{margin-bottom:10px!important;font-size:17px!important;line-height:1.45!important}
   body.p003 #classes .level-target{margin-bottom:12px!important}
-  body.p003 #classes .level-body>p:last-child{line-height:1.68!important}
+  body.p003 #classes .level-body>p:last-child{line-height:1.7!important}
+
+  /* Program supervision: keep the explanatory sentence readable across the full mobile width. */
+  body.p003 main #classes+section+section .section-head{width:100%!important;max-width:none!important}
+  body.p003 main #classes+section+section .section-head>p:last-child{line-height:1.78!important}
+
+  /* FAQ: reduce the gap between questions without making each row feel cramped. */
+  body.p003 #faq .section-head{margin-bottom:12px!important}
+  body.p003 #faq details{padding:11px 0!important;margin:0!important}
+  body.p003 #faq summary{font-size:14px!important;line-height:1.55!important;padding:0!important;margin:0!important}
+  body.p003 #faq details p{margin:7px 0 1px!important;line-height:1.7!important}
 
   /* Keep the gallery cohesive when source photos have very different exposure. */
   body.p003 .academy-activity-photo.cms-photo{position:relative!important;background-color:rgba(24,45,62,.10)!important;background-blend-mode:multiply!important;box-shadow:inset 0 0 0 9999px rgba(255,255,255,.025)!important}
@@ -40,4 +84,5 @@
   body.p003 .wrap{width:calc(100% - 28px)!important;margin-left:14px!important;margin-right:14px!important}
   body.p003 main .section-head>h2{font-size:21px!important}
   body.p003 #classes .level-body{padding-left:13px!important;padding-right:13px!important}
+  body.p003 #faq details{padding:10px 0!important}
 }
