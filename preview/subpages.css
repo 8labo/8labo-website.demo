@@ -1,4 +1,5 @@
-/* P058b — secondary pages only. */
+/* P060 — secondary pages + canonical mobile header. */
 @import url('./subpages-p049-base.css');
-@import url('./p051-consistency.css?v=p058b');
+@import url('./p051-consistency.css?v=p060');
 @import url('./subpages-academy-align.css');
+@import url('./mobile-header.css?v=p060');
