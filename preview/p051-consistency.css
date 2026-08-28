@@ -1,4 +1,4 @@
-/* P058 — cross-page visual consistency.
+/* P059 — cross-page visual consistency.
    Canonical labels live in HTML. Legacy CSS-generated labels are disabled. */
 .p003 main .kicker{color:#0b5ea8!important}
 .p003 main .academy-reason .kicker,
@@ -19,55 +19,46 @@
   content:none!important;
   display:none!important;
 }
-
-/* One canonical label only in the two areas affected by legacy mobile rules. */
 .p003 .about-renew .about-copy>.heading-unit>.kicker{display:block!important}
 .p003 .academy-renew-hero .wrap>div:first-child>.kicker{display:block!important}
 
 @media(max-width:800px){
-  /* One mobile header scale across HOME / ACADEMY / ABOUT / ADULTS / CONTACT. */
-  .p003 .site-header .brand{
-    font-size:1.08rem!important;
+  /* Exact mobile header contract. This selector outranks page-specific header rules. */
+  html body.p003 header.site-header>a.brand,
+  html body.p003.subpage header.site-header>a.brand,
+  html body.p003.home-page header.site-header>a.brand{
+    font-family:'Noto Sans JP',sans-serif!important;
+    font-size:18px!important;
     font-weight:900!important;
     line-height:1!important;
     letter-spacing:.08em!important;
+    color:#fff!important;
+    opacity:1!important;
+    transform:none!important;
   }
-  .p003 .site-header .menu-button{
-    font-size:.8rem!important;
+  html body.p003 header.site-header>button.menu-button,
+  html body.p003.subpage header.site-header>button.menu-button,
+  html body.p003.home-page header.site-header>button.menu-button{
+    display:block!important;
+    font-family:'Noto Sans JP',sans-serif!important;
+    font-size:13px!important;
     font-weight:800!important;
     line-height:1!important;
     letter-spacing:.12em!important;
+    color:#fff!important;
+    opacity:1!important;
+    transform:none!important;
   }
 
   .p003 .site-footer>p:not(.copyright),
   .p003 .site-footer .academy-footer-main>div>p{white-space:nowrap!important;font-size:12px!important;letter-spacing:-.025em!important}
 
-  /* Academy footer: match the clean right-aligned return-link treatment used on other subpages. */
+  /* Academy footer return link. */
   .p003 .site-footer:has(.academy-footer-main){position:relative!important;padding-left:12px!important;padding-right:12px!important}
-  .p003 .site-footer .academy-footer-main{
-    display:block!important;
-    max-width:none!important;
-    margin:0!important;
-    padding-right:0!important;
-  }
-  .p003 .site-footer .academy-desktop-top-link{
-    position:absolute!important;
-    top:28px!important;
-    right:12px!important;
-    max-width:calc(100% - 150px)!important;
-    margin:0!important;
-    font-size:12px!important;
-    line-height:1.4!important;
-    white-space:nowrap!important;
-    text-align:right!important;
-  }
+  .p003 .site-footer .academy-footer-main{display:block!important;max-width:none!important;margin:0!important;padding-right:0!important}
+  .p003 .site-footer .academy-desktop-top-link{position:absolute!important;top:28px!important;right:12px!important;max-width:calc(100% - 150px)!important;margin:0!important;font-size:12px!important;line-height:1.4!important;white-space:nowrap!important;text-align:right!important}
 }
 
 @media(max-width:390px){
-  .p003 .site-footer .academy-desktop-top-link{
-    right:12px!important;
-    max-width:calc(100% - 132px)!important;
-    font-size:11px!important;
-    letter-spacing:-.02em!important;
-  }
+  .p003 .site-footer .academy-desktop-top-link{right:12px!important;max-width:calc(100% - 132px)!important;font-size:11px!important;letter-spacing:-.02em!important}
 }
