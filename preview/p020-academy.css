@@ -1,27 +1,20 @@
-/* P057 — Academy P050 base + shared consistency layer.
-   Only the preparing-class presentation is adjusted here. */
+/* P058b — Academy P050 base + shared consistency layer. */
 @import url('./academy-p050-base.css');
-@import url('./p051-consistency.css');
+@import url('./p051-consistency.css?v=p058b');
 
-/* Keep the preparing class clearly visible, but visually quieter than active classes. */
 body.p003 #classes .class-card.preparing{
   background:#eef2f5!important;
   border-color:#c2ced7!important;
   box-shadow:0 5px 14px rgba(7,59,104,.035)!important;
 }
 body.p003 #classes .class-card.preparing h3,
-body.p003 #classes .class-card.preparing .class-info span{
-  color:#536574!important;
-}
-body.p003 #classes .class-card.preparing .day-badge{
-  background:#6f8798!important;
-}
+body.p003 #classes .class-card.preparing .class-info span{color:#536574!important}
+body.p003 #classes .class-card.preparing .day-badge{background:#6f8798!important}
 body.p003 #classes .class-card.preparing .level-badge{
   background:#e4ebf0!important;
   border-color:#c4d0d9!important;
   color:#526b7e!important;
 }
-/* Restore the previous non-pill status icon treatment. */
 body.p003 #classes .class-card.preparing .status-inline{
   display:inline-flex!important;
   width:auto!important;
