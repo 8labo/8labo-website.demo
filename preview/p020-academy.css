@@ -1,5 +1,5 @@
-/* ACADEMY stylesheet entry point — P041
-   Stable import plus focused Academy corrections for text measure, density, photo tone, footer and desktop CTA hierarchy. */
+/* ACADEMY stylesheet entry point — P050
+   Stable import plus focused Academy corrections for text measure, density, photo tone, footer and CTA hierarchy. */
 @import url('./academy-refactor.css');
 
 body.p003 main,
@@ -20,6 +20,10 @@ body.p003 #faq details{margin:0!important;padding:10px 0!important;border-top:0!
 body.p003 #faq summary{padding:0!important;line-height:1.62!important}
 body.p003 #faq details[open] summary{padding-bottom:7px!important}
 body.p003 #faq details p{margin:0!important;padding:0 0 2px!important}
+
+/* Preparing classes must read as a status, not disappear into the pale class background. */
+body.p003 #classes .class-card.preparing{border-color:#9aa9b7!important;background:#f3f6f8!important}
+body.p003 #classes .class-card.preparing .status-inline{display:inline-flex!important;align-items:center!important;padding:4px 9px!important;border:1px solid #687786!important;border-radius:999px!important;background:#fff!important;color:#354454!important;font-size:11px!important;font-weight:800!important;line-height:1.35!important;letter-spacing:.02em!important}
 
 body.p003 .site-footer{padding-top:28px!important;padding-bottom:22px!important;min-height:0!important}
 body.p003 .site-footer .footer-brand{margin-bottom:6px!important}
@@ -57,6 +61,10 @@ body.p003 .academy-desktop-top-link:hover{color:#fff!important}
     max-width:100%!important;
   }
 
+  /* Keep the hero title at the intentional comma break on smartphones. */
+  body.p003 .academy-renew-hero h1 .desktop-line{display:inline!important;white-space:nowrap!important}
+  body.p003 .academy-renew-hero h1 .desktop-break{display:block!important}
+
   body.p003 main .section-head>h2{font-size:clamp(21px,5.35vw,25px)!important;line-height:1.42!important;letter-spacing:-.035em!important}
   body.p003 main .section-head>p:not(.kicker),
   body.p003 .academy-renew-hero .wrap>div:first-child>p,
@@ -91,7 +99,7 @@ body.p003 .academy-desktop-top-link:hover{color:#fff!important}
   body.p003 #faq details{padding:10px 0!important}
   body.p003 #faq summary{padding:0!important;line-height:1.62!important}
   body.p003 #faq details[open] summary{padding-bottom:7px!important}
-  body.p003 #faq details p{padding:0 0 2px!important;line-height:1.68!important}
+  body.p003 #faq details p{padding:0 0 2px!important;line-height:1.68!important;color:#354454!important;opacity:1!important;font-weight:500!important}
 
   body.p003 .academy-photo.cms-photo,
   body.p003 .academy-activity-photo.cms-photo{
@@ -103,11 +111,11 @@ body.p003 .academy-desktop-top-link:hover{color:#fff!important}
 
   body.p003 .site-footer{padding-top:22px!important;padding-bottom:18px!important}
 
-  /* Keep the existing smartphone CTA/footer behavior unchanged. */
+  /* Smartphone: use the same footer-contained return link as desktop. */
   body.p003 .academy-trial-cta{background:initial!important;color:inherit!important;border-color:initial!important;padding-left:initial!important;padding-right:initial!important}
-  body.p003 .academy-mobile-top-link{display:inline-flex!important}
-  body.p003 .academy-footer-main{display:block!important;max-width:none!important;margin:0!important}
-  body.p003 .academy-desktop-top-link{display:none!important}
+  body.p003 .academy-mobile-top-link{display:none!important}
+  body.p003 .academy-footer-main{display:flex!important;align-items:flex-start!important;justify-content:space-between!important;gap:18px!important;max-width:none!important;margin:0!important}
+  body.p003 .academy-desktop-top-link{display:inline-flex!important;align-items:center!important;color:rgba(255,255,255,.78)!important;font-size:12px!important;white-space:nowrap!important;margin-top:2px!important}
   body.p003 .site-footer .academy-footer-main p{margin-bottom:10px!important}
   body.p003 .site-footer .copyright{margin-top:0!important}
 }
@@ -116,4 +124,6 @@ body.p003 .academy-desktop-top-link:hover{color:#fff!important}
   body.p003 main .section-head>h2{font-size:21px!important}
   body.p003 #contact h2{font-size:19px!important;letter-spacing:-.05em!important}
   body.p003 #classes .level-body{padding-left:13px!important;padding-right:13px!important}
+  body.p003 .academy-footer-main{gap:10px!important}
+  body.p003 .academy-desktop-top-link{font-size:11px!important}
 }
