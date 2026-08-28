@@ -1,5 +1,5 @@
-/* ACADEMY stylesheet entry point — P038
-   Stable import plus focused mobile corrections for width, wrapping and density. */
+/* ACADEMY stylesheet entry point — P039
+   Stable import plus focused mobile corrections for text measure, density and photo tone. */
 @import url('./academy-refactor.css');
 
 body.p003 main,
@@ -12,7 +12,7 @@ body.p003 main h1,
 body.p003 main h2,
 body.p003 main h3{min-width:0;max-width:100%;box-sizing:border-box}
 
-/* Program supervision copy must use the full content measure. */
+/* Program supervision copy uses the full available measure. */
 body.p003 main section:has(.program-supervisor) .section-head{width:100%!important;max-width:none!important}
 body.p003 main section:has(.program-supervisor) .section-head>p:not(.kicker){display:block!important;width:100%!important;max-width:none!important;margin-left:0!important;margin-right:0!important}
 
@@ -26,10 +26,6 @@ body.p003 #faq details p{margin:0!important;padding:0 0 2px!important}
 @media(max-width:800px){
   body.p003 .academy-renew-hero .academy-photo{order:-1}
   body.p003 .wrap{width:calc(100% - 24px)!important;max-width:none!important;margin-left:12px!important;margin-right:12px!important}
-
-  /* Keep the requested title break on mobile instead of removing it. */
-  body.p003 .academy-renew-hero h1 .desktop-break{display:block!important}
-  body.p003 .academy-renew-hero h1 .desktop-line{display:inline!important;white-space:normal!important}
 
   body.p003 main .section-head>h2,
   body.p003 main .section-head>p,
@@ -72,14 +68,16 @@ body.p003 #faq details p{margin:0!important;padding:0 0 2px!important}
   body.p003 #classes .level-target{margin-bottom:12px!important}
   body.p003 #classes .level-body>p:last-child{line-height:1.68!important}
 
-  body.p003 main section:has(.program-supervisor) .section-head>p:not(.kicker){
-    width:100%!important;
-    max-width:none!important;
-    padding-right:0!important;
-    line-height:1.72!important;
-  }
+  /* The supervision section was still inheriting a narrow paragraph measure from the base CSS.
+     Give its heading copy the complete phone content width. */
+  body.p003 main section:has(.program-supervisor) .wrap{width:calc(100% - 20px)!important;margin-left:10px!important;margin-right:10px!important}
+  body.p003 main section:has(.program-supervisor) .section-head,
+  body.p003 main section:has(.program-supervisor) .section-head>p:not(.kicker){width:100%!important;max-width:100%!important;padding-left:0!important;padding-right:0!important}
   body.p003 .program-supervisor{min-width:0!important;width:100%!important}
   body.p003 .program-supervisor a{width:auto!important;display:inline!important;justify-self:start!important}
+
+  /* Contact headline: use a slightly smaller mobile size so the line fills before wrapping. */
+  body.p003 #contact h2{font-size:20px!important;line-height:1.45!important;letter-spacing:-.045em!important;max-width:none!important;width:100%!important}
 
   body.p003 #faq .faq-list{gap:0!important}
   body.p003 #faq details{padding:10px 0!important}
@@ -87,10 +85,18 @@ body.p003 #faq details p{margin:0!important;padding:0 0 2px!important}
   body.p003 #faq details[open] summary{padding-bottom:7px!important}
   body.p003 #faq details p{padding:0 0 2px!important;line-height:1.68!important}
 
-  body.p003 .academy-activity-photo.cms-photo{position:relative!important;background-color:rgba(24,45,62,.10)!important;background-blend-mode:multiply!important;box-shadow:inset 0 0 0 9999px rgba(255,255,255,.025)!important}
+  /* Mobile crops appear brighter than desktop; apply a restrained, consistent tone correction. */
+  body.p003 .academy-photo.cms-photo,
+  body.p003 .academy-activity-photo.cms-photo{
+    position:relative!important;
+    background-color:rgba(12,31,47,.16)!important;
+    background-blend-mode:multiply!important;
+    box-shadow:inset 0 0 0 9999px rgba(9,28,44,.035)!important;
+  }
 }
 
 @media(max-width:390px){
   body.p003 main .section-head>h2{font-size:21px!important}
+  body.p003 #contact h2{font-size:19px!important;letter-spacing:-.05em!important}
   body.p003 #classes .level-body{padding-left:13px!important;padding-right:13px!important}
 }
