@@ -1,7 +1,7 @@
-/* P065 — one header contract across every page.
-   Black header on desktop/mobile; 24px consistent ８LABO brand.
-   Mobile text autosizing is explicitly disabled to keep identical visual size across pages. */
-body.p003 > header.site-header{
+/* P065b — one header contract across every page.
+   Higher specificity ensures this canonical header outranks older page-level copies.
+   Mobile text autosizing is fixed at 100% so identical px values render identically. */
+html body.p003 > header.site-header{
   height:64px!important;
   padding:0 max(20px,calc((100vw - 1180px)/2))!important;
   display:flex!important;
@@ -15,7 +15,7 @@ body.p003 > header.site-header{
   mix-blend-mode:normal!important;
   isolation:isolate!important;
 }
-body.p003 > header.site-header > a.brand{
+html body.p003 > header.site-header > a.brand{
   margin:0!important;
   padding:0!important;
   font-family:system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif!important;
@@ -27,7 +27,7 @@ body.p003 > header.site-header > a.brand{
   opacity:1!important;
   transform:none!important;
 }
-body.p003 > header.site-header > button.menu-button{
+html body.p003 > header.site-header > button.menu-button{
   margin:0!important;
   padding:0!important;
   background:none!important;
@@ -42,8 +42,8 @@ body.p003 > header.site-header > button.menu-button{
   transform:none!important;
 }
 @media(min-width:801px){
-  body.p003 > header.site-header > button.menu-button{display:none!important}
-  body.p003 > header.site-header > nav.global-nav{
+  html body.p003 > header.site-header > button.menu-button{display:none!important}
+  html body.p003 > header.site-header > nav.global-nav{
     display:flex!important;
     align-items:center!important;
     gap:28px!important;
@@ -56,7 +56,7 @@ body.p003 > header.site-header > button.menu-button{
     border:0!important;
     box-shadow:none!important;
   }
-  body.p003 > header.site-header > nav.global-nav a{
+  html body.p003 > header.site-header > nav.global-nav a{
     display:block!important;
     width:auto!important;
     margin:0!important;
@@ -73,12 +73,12 @@ body.p003 > header.site-header > button.menu-button{
 }
 @media(max-width:800px){
   html,body{ -webkit-text-size-adjust:100%!important; text-size-adjust:100%!important; }
-  body.p003 > header.site-header{padding:0 20px!important}
-  body.p003 > header.site-header > a.brand{
+  html body.p003 > header.site-header{padding:0 20px!important}
+  html body.p003 > header.site-header > a.brand{
     font-size:24px!important;
     font-family:system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif!important;
     font-weight:900!important;
     line-height:24px!important;
   }
-  body.p003 > header.site-header > button.menu-button{display:block!important}
+  html body.p003 > header.site-header > button.menu-button{display:block!important}
 }
