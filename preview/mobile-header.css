@@ -1,5 +1,5 @@
-/* P063 — one header contract across every page.
-   Black header on desktop/mobile; large, consistent ８LABO brand and matching type metrics. */
+/* P064 — one header contract across every page.
+   Black header on desktop/mobile; 24px consistent ８LABO brand and matching type metrics. */
 body.p003 > header.site-header{
   height:64px!important;
   padding:0 max(20px,calc((100vw - 1180px)/2))!important;
@@ -18,7 +18,7 @@ body.p003 > header.site-header > a.brand{
   margin:0!important;
   padding:0!important;
   font-family:system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif!important;
-  font-size:20px!important;
+  font-size:24px!important;
   font-weight:900!important;
   line-height:1!important;
   letter-spacing:.08em!important;
@@ -72,5 +72,6 @@ body.p003 > header.site-header > button.menu-button{
 }
 @media(max-width:800px){
   body.p003 > header.site-header{padding:0 20px!important}
+  body.p003 > header.site-header > a.brand{font-size:24px!important}
   body.p003 > header.site-header > button.menu-button{display:block!important}
 }
