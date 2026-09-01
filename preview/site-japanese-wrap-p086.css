@@ -1,0 +1,50 @@
+/* P086 — phrase-aware Japanese wrapping for Home and Academy mobile text. */
+
+@media(max-width:800px){
+  body.p003.home-page .entrance-copy p,
+  body.p003.home-page .section-head>p:last-child,
+  body.p003.home-page .value-card p,
+  body.p003.home-page .featured p,
+  body.p003.home-page .reason p,
+  body.p003.home-page .about-copy p,
+  body.p003 main .section-head>p:not(.kicker),
+  body.p003 .academy-renew-hero .wrap>div:first-child>p:not(.kicker),
+  body.p003 .change-card p,
+  body.p003 .program p,
+  body.p003 .reason p,
+  body.p003 #classes .level-body p,
+  body.p003 details p{
+    text-align:left!important;
+    text-align-last:left!important;
+    white-space:normal!important;
+    line-break:strict!important;
+    overflow-wrap:normal!important;
+    word-break:normal!important;
+    word-spacing:normal!important;
+    text-wrap:pretty!important;
+  }
+
+  @supports (word-break:auto-phrase){
+    body.p003.home-page .entrance-copy p,
+    body.p003.home-page .section-head>p:last-child,
+    body.p003.home-page .value-card p,
+    body.p003.home-page .featured p,
+    body.p003.home-page .reason p,
+    body.p003.home-page .about-copy p,
+    body.p003 main .section-head>p:not(.kicker),
+    body.p003 .academy-renew-hero .wrap>div:first-child>p:not(.kicker),
+    body.p003 .change-card p,
+    body.p003 .program p,
+    body.p003 .reason p,
+    body.p003 #classes .level-body p,
+    body.p003 details p{
+      word-break:auto-phrase!important;
+    }
+  }
+
+  /* The KIDS card is narrow on mobile, so do not allow awkward intra-word breaks. */
+  body.p003.home-page .entrance-copy p{
+    overflow-wrap:normal!important;
+    hyphens:none!important;
+  }
+}
