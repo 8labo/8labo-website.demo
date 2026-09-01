@@ -1,0 +1,81 @@
+@media (max-width:800px){
+  html{scroll-padding-top:72px}
+  body{font-size:15px;line-height:1.75;letter-spacing:.01em;-webkit-text-size-adjust:100%;text-size-adjust:100%;line-break:strict;word-break:normal;overflow-wrap:break-word}
+  .site-header{height:72px;padding:0 20px;background:#071b33;color:#fff;mix-blend-mode:normal;border-bottom:1px solid rgba(255,255,255,.1)}
+  .brand{font-size:1.08rem;letter-spacing:.08em}
+  .menu-button{display:block;position:relative;z-index:105;color:#fff;font-size:.78rem;letter-spacing:.06em;padding:8px 0}
+  .global-nav{display:none;position:fixed;inset:72px 0 0 0;z-index:104;min-width:0;width:100%;height:calc(100svh - 72px);padding:26px 24px 34px;background:#071b33;color:#fff;mix-blend-mode:normal;overflow:auto;flex-direction:column;gap:0}
+  .global-nav.is-open{display:flex}
+  .global-nav a{display:flex;align-items:center;min-height:56px;width:100%;padding:15px 4px;border-bottom:1px solid rgba(255,255,255,.14);font-size:1rem;font-weight:700;letter-spacing:.1em;line-height:1.25;opacity:1;color:#fff}
+  .global-nav a:first-child{border-top:1px solid rgba(255,255,255,.14)}
+  body.menu-open{overflow:hidden}
+  .preview-badge{position:fixed;right:12px;bottom:12px;z-index:150;padding:6px 9px;border-radius:999px;background:rgba(7,27,51,.9);color:#fff;font-size:.66rem;font-weight:800;letter-spacing:.08em;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+
+  .hero{min-height:auto;padding-top:72px}
+  .hero-inner,.section-wrap{width:calc(100% - 40px)}
+  .hero-inner{padding:72px 0 70px}
+  .section-wrap{padding:74px 0}
+  .eyebrow,.section-index{font-size:.68rem;letter-spacing:.16em}
+  .hero h1{font-size:clamp(2.6rem,11vw,3.25rem);line-height:1.12;letter-spacing:-.035em;margin:16px 0 22px}
+  .hero-copy{font-size:1.12rem;line-height:1.65;margin-bottom:22px}
+  .hero-lead{font-size:.96rem;line-height:1.85}
+  .section-heading{margin-bottom:36px}
+  .section-heading h2,.statement h2,.story h2,.support h2,.contact h2,.future h2{font-size:clamp(2rem,8.7vw,2.5rem);line-height:1.3;letter-spacing:-.025em;margin:16px 0 22px}
+  .statement-large{font-size:1.22rem;line-height:1.65;margin:32px 0}
+  .statement p,.story-copy p,.support-lead,.contact p,.section-heading>p:last-child{font-size:.96rem;line-height:1.85}
+  .story-copy .lead{font-size:1.08rem;line-height:1.8}
+  .vision-card{padding:26px}
+  .vision-card h3{margin-top:28px;font-size:1.18rem;line-height:1.5}
+  .vision-card p,.support-grid p,.activity-item p,.story-copy p{line-height:1.85}
+  .big-number{font-size:4.6rem;margin:26px 0 32px}
+  .future-lines p{font-size:.98rem;line-height:1.7;padding:15px 0}
+  .future-closing{font-size:1rem;line-height:1.75}
+
+  .activity-item{display:block;padding:34px 0}
+  .activity-no{display:inline-flex;align-items:center;justify-content:center;min-width:38px;height:38px;padding:0 10px;margin:0 0 14px;background:#075ea8;color:#fff;font-size:1.05rem;line-height:1;border-radius:2px}
+  .activity-label{font-size:.68rem;letter-spacing:.12em;margin:0 0 8px}
+  .activity-item h3{font-size:1.42rem;line-height:1.45;margin:6px 0 12px}
+  .activity-item p{font-size:.96rem}
+  .academy-link{font-size:.88rem}
+
+  .support-lead{margin:22px 0 34px}
+  .support-grid>div{min-height:0;padding:26px}
+  .support-grid h3{margin-top:26px}
+  .stories-grid{margin-top:28px}
+  .story-channel{min-height:0;padding:24px}
+  .story-channel h3{font-size:1.18rem}
+  .story-channel p:last-child{font-size:.9rem;line-height:1.8}
+  .contact{text-align:left}
+  .contact .section-index{text-align:left}
+  .contact p{margin-left:0;margin-right:0}
+  .contact-button{margin-top:22px;padding:14px 20px}
+  .footer-brand{font-size:1.55rem}
+  .site-footer{padding:38px 20px 28px}
+
+  .academy-hero{padding:124px 0 60px}
+  .academy-hero h1{font-size:clamp(2.05rem,9vw,2.55rem);line-height:1.3;margin:16px 0 20px}
+  .academy-intro{font-size:.96rem;line-height:1.85}
+  .academy-philosophy h2,.level-section .section-heading h2{font-size:clamp(1.9rem,8vw,2.35rem);line-height:1.35}
+  .academy-philosophy-grid{gap:14px;margin-top:28px}
+  .academy-philosophy-grid div{padding:24px}
+  .level-grid{margin-top:28px;gap:16px}
+  .level-header{padding:18px 20px}
+  .level-body{padding:22px 20px 24px}
+  .level-card h3{font-size:1.13rem;line-height:1.5}
+  .level-body>p:last-child{font-size:.9rem;line-height:1.82}
+  .level-note{font-size:.8rem;line-height:1.8}
+  .class-grid{gap:14px}
+  .class-card{padding:24px}
+  .class-card h3{font-size:1.22rem}
+  .class-info{grid-template-columns:62px 1fr;font-size:.87rem}
+  .class-meta{margin-bottom:18px}
+  .status-inline{margin-left:0}
+}
+
+@media (max-width:390px){
+  .hero-inner,.section-wrap{width:calc(100% - 32px)}
+  .section-wrap{padding:66px 0}
+  .hero h1{font-size:2.5rem}
+  .section-heading h2,.statement h2,.story h2,.support h2,.contact h2,.future h2{font-size:1.95rem}
+  .activity-item h3{font-size:1.34rem}
+}
