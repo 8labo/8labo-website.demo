@@ -1,4 +1,4 @@
-/* P069 — final label/hero contract for secondary pages only.
+/* P070 — final label/hero contract for secondary pages only.
    Home and Academy are intentionally untouched. */
 
 /* Every decorative English section label uses exactly one typographic contract. */
@@ -38,6 +38,28 @@ html body.p003.about-page .sub-hero p:not(.kicker){
   max-width:none!important;
 }
 
+/* Contact inquiry guide: give the title column enough room and align every description to one clean axis. */
+html body.p003.contact-page .contact-example-list > div{
+  display:grid!important;
+  grid-template-columns:minmax(260px,300px) minmax(0,1fr)!important;
+  column-gap:32px!important;
+  align-items:start!important;
+}
+html body.p003.contact-page .contact-example-list > div > strong,
+html body.p003.contact-page .contact-example-list > div > p{
+  margin:0!important;
+  padding:0!important;
+}
+html body.p003.contact-page .contact-example-list > div > strong{
+  width:auto!important;
+  max-width:none!important;
+}
+html body.p003.contact-page .contact-example-list > div > p{
+  width:auto!important;
+  max-width:none!important;
+  text-indent:0!important;
+}
+
 @media(max-width:800px){
   html body.p003.subpage main p.kicker,
   html body.p003.subpage main .section-head > p.kicker,
@@ -54,6 +76,13 @@ html body.p003.about-page .sub-hero p:not(.kicker){
   }
   html body.p003.about-page .sub-hero h1{
     font-size:clamp(30px,8vw,36px)!important;
+  }
+  html body.p003.contact-page .contact-example-list > div{
+    display:block!important;
+  }
+  html body.p003.contact-page .contact-example-list > div > strong{
+    display:block!important;
+    margin-bottom:5px!important;
   }
 }
 @media(max-width:390px){
