@@ -1,5 +1,4 @@
-/* P067 — typography contract for ABOUT / FOR ADULTS / CONTACT only.
-   Values are aligned to the approved Home / Academy hierarchy.
+/* P068 — typography contract for ABOUT / FOR ADULTS / CONTACT only.
    Home and Academy are intentionally untouched. */
 
 body.p003.subpage,
@@ -10,13 +9,23 @@ body.p003.subpage textarea{
   font-family:'Noto Sans JP',sans-serif!important;
 }
 
-/* Main hierarchy — Academy reference values */
+/* One canonical decorative English label style across all three secondary pages. */
 body.p003.subpage main .kicker{
+  font-family:'Noto Sans JP',sans-serif!important;
   font-size:12px!important;
   font-weight:800!important;
   line-height:1.4!important;
   letter-spacing:.16em!important;
+  color:#0b5ea8!important;
+  text-transform:none!important;
 }
+/* Keep the same metrics on dark sections; only contrast color changes. */
+body.p003.subpage main .bizfit-section .kicker,
+body.p003.subpage main .renew-contact .kicker{
+  color:#8bc8ff!important;
+}
+
+/* Main hierarchy — Academy reference values */
 body.p003.subpage .sub-hero h1{
   font-size:clamp(42px,3.55vw,58px)!important;
   font-weight:700!important;
@@ -48,7 +57,7 @@ body.p003.subpage .contact-direct p{
   line-height:1.9!important;
 }
 
-/* Cards, lists and form content use the same body scale as Academy */
+/* Cards, lists and form content use the same body scale as Academy. */
 body.p003.subpage .simple-grid>div,
 body.p003.subpage .contact-example-list p,
 body.p003.subpage .contact-form label,
@@ -63,12 +72,15 @@ body.p003.subpage .contact-example-list strong{
   font-size:16px!important;
   line-height:1.5!important;
 }
-body.p003.subpage .contact-example-list span,
+
+/* Secondary English metadata is intentionally smaller than section labels. */
 body.p003.subpage .operator-career span{
+  font-family:'Noto Sans JP',sans-serif!important;
   font-size:11px!important;
   font-weight:800!important;
   line-height:1.4!important;
   letter-spacing:.12em!important;
+  color:#0b5ea8!important;
 }
 
 /* About-specific secondary hierarchy */
@@ -110,7 +122,9 @@ body.p003.subpage .site-footer .copyright{
 
 @media(max-width:800px){
   body.p003.subpage main .kicker{
+    font-family:'Noto Sans JP',sans-serif!important;
     font-size:10px!important;
+    font-weight:800!important;
     line-height:1.35!important;
     letter-spacing:.15em!important;
   }
@@ -158,6 +172,10 @@ body.p003.subpage .site-footer .copyright{
   body.p003.subpage .form-submit p{
     font-size:14px!important;
     line-height:1.72!important;
+  }
+  body.p003.subpage .operator-career span{
+    font-size:10px!important;
+    letter-spacing:.12em!important;
   }
   body.p003.subpage .site-footer .footer-brand{font-size:20px!important}
   body.p003.subpage .site-footer p,
