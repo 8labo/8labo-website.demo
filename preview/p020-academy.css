@@ -1,9 +1,9 @@
-/* P086 — Academy base + shared consistency + canonical site header + Japanese wrapping. */
+/* P087 — Academy base + shared consistency + canonical site header + canonical typography. */
 @import url('./academy-p050-base.css');
 @import url('./p051-consistency.css?v=p073');
 @import url('./mobile-header.css?v=p066');
 @import url('./header-p071.css?v=p073');
-@import url('./site-japanese-wrap-p086.css?v=p086');
+@import url('./site-japanese-wrap-p086.css?v=p087');
 
 body.p003 #classes .class-card.preparing{
   background:#eef2f5!important;
