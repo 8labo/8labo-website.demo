@@ -1,4 +1,4 @@
-/* P073 — final label/hero/contact contract for secondary pages only.
+/* P074 — final label/hero/contact/profile contract for secondary pages only.
    Home and Academy are intentionally untouched. */
 
 html body.p003.subpage main p.kicker,
@@ -42,7 +42,6 @@ html body.p003.contact-page .contact-example-list > div > p{margin:0!important;p
 html body.p003.contact-page .contact-example-list > div > strong{width:auto!important;max-width:none!important}
 html body.p003.contact-page .contact-example-list > div > p{width:auto!important;max-width:none!important;text-indent:0!important}
 
-/* Direct email CTA: button is primary, raw address stays available but quiet. */
 html body.p003.contact-page .contact-direct .contact-email-actions{
   display:flex!important;
   flex-direction:column!important;
@@ -73,6 +72,53 @@ html body.p003.contact-page .contact-direct .contact-email-address{
   word-break:break-all!important;
 }
 
+/* Founder / representative profile */
+html body.p003.about-page .about-operator>.wrap{max-width:980px!important}
+html body.p003.about-page .operator-heading{margin-bottom:26px!important}
+html body.p003.about-page .operator-profile{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) 260px!important;
+  grid-template-areas:"main photo" "detail detail"!important;
+  gap:28px 44px!important;
+  align-items:start!important;
+}
+html body.p003.about-page .operator-main{grid-area:main!important;padding-top:4px!important}
+html body.p003.about-page .operator-photo{
+  grid-area:photo!important;
+  width:260px!important;
+  aspect-ratio:4/5!important;
+  justify-self:end!important;
+  background:#edf2f5!important;
+  background-size:cover!important;
+  background-position:var(--cms-dx,50%) var(--cms-dy,50%)!important;
+  color:#9aa5ad!important;
+}
+html body.p003.about-page .operator-detail{
+  grid-area:detail!important;
+  padding-top:24px!important;
+  border-top:1px solid #dce5eb!important;
+}
+html body.p003.about-page .operator-role{
+  margin:0 0 6px!important;
+  color:#667085!important;
+  font-size:13px!important;
+  font-weight:700!important;
+  line-height:1.5!important;
+}
+html body.p003.about-page .operator-name{margin:0 0 22px!important}
+html body.p003.about-page .operator-name strong{
+  font-size:30px!important;
+  font-weight:800!important;
+  line-height:1.25!important;
+  letter-spacing:-.035em!important;
+}
+html body.p003.about-page .operator-career{margin:0!important}
+html body.p003.about-page .operator-career span{margin-bottom:8px!important}
+html body.p003.about-page .operator-career p{margin:0!important}
+html body.p003.about-page .operator-intro{margin:0 0 14px!important}
+html body.p003.about-page .operator-note{margin:0!important}
+html body.p003.about-page .operator-photo.cms-photo span{display:none!important}
+
 @media(max-width:800px){
   html body.p003.subpage main p.kicker,
   html body.p003.subpage main .section-head > p.kicker,
@@ -90,14 +136,33 @@ html body.p003.contact-page .contact-direct .contact-email-address{
   html body.p003.about-page .sub-hero h1{font-size:clamp(30px,8vw,36px)!important}
   html body.p003.contact-page .contact-example-list > div{display:block!important}
   html body.p003.contact-page .contact-example-list > div > strong{display:block!important;margin-bottom:5px!important}
-  html body.p003.contact-page .contact-direct .contact-email-button{
-    width:100%!important;
-    min-height:48px!important;
+  html body.p003.contact-page .contact-direct .contact-email-button{width:100%!important;min-height:48px!important}
+  html body.p003.contact-page .contact-direct .contact-email-address{width:100%!important;text-align:center!important;font-size:11px!important}
+
+  html body.p003.about-page .operator-heading{margin-bottom:20px!important}
+  html body.p003.about-page .operator-profile{
+    grid-template-columns:minmax(0,1fr) 38%!important;
+    grid-template-areas:"main photo" "detail detail"!important;
+    gap:20px 18px!important;
   }
-  html body.p003.contact-page .contact-direct .contact-email-address{
+  html body.p003.about-page .operator-main{padding-top:0!important}
+  html body.p003.about-page .operator-photo{
     width:100%!important;
-    text-align:center!important;
-    font-size:11px!important;
+    max-width:180px!important;
+    aspect-ratio:4/5!important;
+    margin:0!important;
+    background-position:var(--cms-mx,50%) var(--cms-my,50%)!important;
   }
+  html body.p003.about-page .operator-role{font-size:11px!important;margin-bottom:4px!important}
+  html body.p003.about-page .operator-name{margin-bottom:16px!important}
+  html body.p003.about-page .operator-name strong{font-size:24px!important;line-height:1.25!important}
+  html body.p003.about-page .operator-career span{font-size:9px!important;margin-bottom:6px!important}
+  html body.p003.about-page .operator-career p{font-size:12px!important;line-height:1.72!important}
+  html body.p003.about-page .operator-detail{padding-top:18px!important}
 }
-@media(max-width:390px){html body.p003.about-page .sub-hero h1{font-size:30px!important}}
+@media(max-width:390px){
+  html body.p003.about-page .sub-hero h1{font-size:30px!important}
+  html body.p003.about-page .operator-profile{grid-template-columns:minmax(0,1fr) 42%!important;gap:18px 14px!important}
+  html body.p003.about-page .operator-name strong{font-size:22px!important}
+  html body.p003.about-page .operator-career p{font-size:11px!important}
+}
