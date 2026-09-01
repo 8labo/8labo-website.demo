@@ -1,0 +1,43 @@
+/* P078 — restore P076 text arrangement; only make portrait smaller and tighten spacing. */
+.about-page .about-operator>.wrap{max-width:920px!important}
+.about-page .operator-profile{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) 124px!important;
+  grid-template-areas:"main photo" "detail detail"!important;
+  column-gap:28px!important;
+  row-gap:14px!important;
+  align-items:start!important;
+}
+.about-page .operator-main{grid-area:main!important;align-self:start!important}
+.about-page .operator-photo{
+  grid-area:photo!important;
+  width:124px!important;
+  aspect-ratio:4/5!important;
+  align-self:start!important;
+  justify-self:end!important;
+  margin:0!important;
+}
+.about-page .operator-detail{
+  grid-area:detail!important;
+  margin:0!important;
+  padding-top:14px!important;
+  border-top:1px solid #dfe6ec!important;
+}
+.about-page .operator-detail .operator-intro{margin:0 0 12px!important}
+.about-page .operator-detail .operator-note{margin:0!important}
+
+@media(max-width:800px){
+  .about-page .operator-profile{
+    grid-template-columns:minmax(0,1fr) 96px!important;
+    grid-template-areas:"main photo" "detail detail"!important;
+    column-gap:14px!important;
+    row-gap:12px!important;
+  }
+  .about-page .operator-photo{width:96px!important}
+  .about-page .operator-career{margin:16px 0 0!important}
+  .about-page .operator-detail{padding-top:12px!important}
+}
+@media(max-width:390px){
+  .about-page .operator-profile{grid-template-columns:minmax(0,1fr) 90px!important;column-gap:12px!important}
+  .about-page .operator-photo{width:90px!important}
+}
