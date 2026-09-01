@@ -1,0 +1,17 @@
+/* P071 — Academy header brand is the canonical size for every page. */
+html body.p003 > header.site-header > a.brand{
+  font-family:"Noto Sans JP",sans-serif!important;
+  font-size:24px!important;
+  font-weight:900!important;
+  line-height:24px!important;
+  letter-spacing:.08em!important;
+  color:#fff!important;
+  opacity:1!important;
+  transform:none!important;
+}
+@media(max-width:800px){
+  html body.p003 > header.site-header > a.brand{
+    font-size:24px!important;
+    line-height:24px!important;
+  }
+}
