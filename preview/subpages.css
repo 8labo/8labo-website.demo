@@ -1,4 +1,4 @@
-/* P087 — secondary pages share the same canonical typography / wrapping rules as Home / Academy. */
+/* P088 — secondary-page entry point. Page-specific typography stays isolated from Home / Academy. */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap');
 @import url('./subpages-p049-base.css');
 @import url('./p051-consistency.css?v=p073');
@@ -7,4 +7,4 @@
 @import url('./subpages-typography-p067.css?v=p068');
 @import url('./subpages-label-contract-p069.css?v=p074');
 @import url('./header-p071.css?v=p073');
-@import url('./site-japanese-wrap-p086.css?v=p087');
+@import url('./subpages-japanese-wrap-p085.css?v=p088');
