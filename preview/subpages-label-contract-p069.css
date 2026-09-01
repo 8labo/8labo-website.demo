@@ -1,0 +1,61 @@
+/* P069 — final label/hero contract for secondary pages only.
+   Home and Academy are intentionally untouched. */
+
+/* Every decorative English section label uses exactly one typographic contract. */
+html body.p003.subpage main p.kicker,
+html body.p003.subpage main .section-head > p.kicker,
+html body.p003.subpage main .story > p.kicker,
+html body.p003.subpage main .mv-page-grid p.kicker,
+html body.p003.subpage main .about-operator p.kicker,
+html body.p003.subpage main .bizfit-section p.kicker,
+html body.p003.subpage main .renew-contact p.kicker,
+html body.p003.subpage main .contact-direct p.kicker{
+  margin-top:0!important;
+  font-family:'Noto Sans JP',sans-serif!important;
+  font-size:12px!important;
+  font-style:normal!important;
+  font-weight:800!important;
+  line-height:1.4!important;
+  letter-spacing:.16em!important;
+  color:#0b5ea8!important;
+  text-transform:none!important;
+  font-synthesis:none!important;
+}
+html body.p003.subpage main .bizfit-section p.kicker,
+html body.p003.subpage main .renew-contact p.kicker{
+  color:#8bc8ff!important;
+}
+
+/* About hero has no right-side visual: use the full content width and allow only natural viewport wrapping. */
+html body.p003.about-page .sub-hero h1{
+  width:100%!important;
+  max-width:none!important;
+  font-size:clamp(42px,3.55vw,58px)!important;
+  white-space:normal!important;
+}
+html body.p003.about-page .sub-hero p:not(.kicker){
+  width:100%!important;
+  max-width:none!important;
+}
+
+@media(max-width:800px){
+  html body.p003.subpage main p.kicker,
+  html body.p003.subpage main .section-head > p.kicker,
+  html body.p003.subpage main .story > p.kicker,
+  html body.p003.subpage main .mv-page-grid p.kicker,
+  html body.p003.subpage main .about-operator p.kicker,
+  html body.p003.subpage main .bizfit-section p.kicker,
+  html body.p003.subpage main .renew-contact p.kicker,
+  html body.p003.subpage main .contact-direct p.kicker{
+    font-size:10px!important;
+    font-weight:800!important;
+    line-height:1.35!important;
+    letter-spacing:.15em!important;
+  }
+  html body.p003.about-page .sub-hero h1{
+    font-size:clamp(30px,8vw,36px)!important;
+  }
+}
+@media(max-width:390px){
+  html body.p003.about-page .sub-hero h1{font-size:30px!important}
+}
