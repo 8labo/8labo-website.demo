@@ -1,6 +1,5 @@
-/* P086 — home base + shared consistency + canonical site header + Japanese wrapping. */
+/* P073 — home base + shared consistency + canonical site header. */
 @import url('./home-p051-base.css');
 @import url('./p051-consistency.css?v=p073');
 @import url('./mobile-header.css?v=p066');
 @import url('./header-p071.css?v=p073');
-@import url('./site-japanese-wrap-p086.css?v=p086');

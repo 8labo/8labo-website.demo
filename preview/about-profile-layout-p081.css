@@ -1,0 +1,45 @@
+/* P081 — keep the current text layout; halve only the founder portrait frame from P080. */
+.about-page .about-operator>.wrap{max-width:920px!important}
+.about-page .operator-profile{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) 39px!important;
+  grid-template-areas:"main photo" "detail detail"!important;
+  column-gap:16px!important;
+  row-gap:6px!important;
+  align-items:start!important;
+}
+.about-page .operator-main{grid-area:main!important;align-self:start!important}
+.about-page .operator-photo{
+  grid-area:photo!important;
+  width:39px!important;
+  min-width:39px!important;
+  max-width:39px!important;
+  aspect-ratio:4/5!important;
+  align-self:start!important;
+  justify-self:end!important;
+  margin:0!important;
+}
+.about-page .operator-detail{
+  grid-area:detail!important;
+  margin:0!important;
+  padding-top:8px!important;
+  border-top:1px solid #dfe6ec!important;
+}
+.about-page .operator-detail .operator-intro{margin:0 0 12px!important}
+.about-page .operator-detail .operator-note{margin:0!important}
+
+@media(max-width:800px){
+  .about-page .operator-profile{
+    grid-template-columns:minmax(0,1fr) 31px!important;
+    grid-template-areas:"main photo" "detail detail"!important;
+    column-gap:8px!important;
+    row-gap:6px!important;
+  }
+  .about-page .operator-photo{width:31px!important;min-width:31px!important;max-width:31px!important}
+  .about-page .operator-career{margin:16px 0 0!important}
+  .about-page .operator-detail{padding-top:6px!important}
+}
+@media(max-width:390px){
+  .about-page .operator-profile{grid-template-columns:minmax(0,1fr) 29px!important;column-gap:7px!important}
+  .about-page .operator-photo{width:29px!important;min-width:29px!important;max-width:29px!important}
+}
