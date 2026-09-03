@@ -1,21 +1,13 @@
-/* P088 — home base + shared consistency + canonical site header. */
+/* P089 — home base + shared consistency + canonical site header. */
 @import url('./home-p051-base.css');
 @import url('./p051-consistency.css?v=p073');
 @import url('./mobile-header.css?v=p066');
 @import url('./header-p071.css?v=p073');
 
-/* Mobile width correction only: reclaim space previously consumed by legacy entrance-card sizing. */
+/* Mobile entrance cards: preserve the approved visual proportions.
+   Only balance short description lines so the right rag stays visually consistent. */
 @media(max-width:800px){
-  .home-page .entrance-grid .entrance-card{
-    grid-template-columns:68px minmax(0,1fr)!important;
-  }
-  .home-page .entrance-grid .entrance-visual{
-    width:68px!important;
-    min-width:68px!important;
-    padding:0 2px!important;
-    font-size:.8rem!important;
-  }
-  .home-page .entrance-grid .entrance-copy{
-    padding:15px 10px!important;
+  .home-page .entrance-grid .entrance-copy p{
+    text-wrap:balance;
   }
 }
