@@ -1,13 +1,26 @@
-/* P089 — home base + shared consistency + canonical site header. */
+/* P090 — home base + shared consistency + canonical site header. */
 @import url('./home-p051-base.css');
 @import url('./p051-consistency.css?v=p073');
 @import url('./mobile-header.css?v=p066');
 @import url('./header-p071.css?v=p073');
 
-/* Mobile entrance cards: preserve the approved visual proportions.
-   Only balance short description lines so the right rag stays visually consistent. */
+/* Mobile text baseline:
+   body/description copy uses the full width of its own content area.
+   Headings are intentionally excluded and keep their page-specific layout. */
 @media(max-width:800px){
-  .home-page .entrance-grid .entrance-copy p{
-    text-wrap:balance;
+  .home-page .section-head>p:last-child,
+  .home-page .home-hero .hero-text,
+  .home-page .entrance-copy p,
+  .home-page .value-card p,
+  .home-page .featured p,
+  .home-page .reason p,
+  .home-page .about-copy p,
+  .home-page .content-card p,
+  .home-page .renew-contact>.wrap>p{
+    width:100%;
+    max-width:none;
+    min-width:0;
+    white-space:normal;
+    text-wrap:wrap;
   }
 }
