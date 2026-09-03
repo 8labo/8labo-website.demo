@@ -1,4 +1,4 @@
-/* P088 — secondary pages use the same font source and typography scale as Home / Academy. */
+/* P090 — secondary pages use the same font source and typography scale as Home / Academy. */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap');
 @import url('./subpages-p049-base.css');
 @import url('./p051-consistency.css?v=p073');
@@ -8,15 +8,25 @@
 @import url('./subpages-label-contract-p069.css?v=p074');
 @import url('./header-p071.css?v=p073');
 
-/* Mobile width correction only. Preserve typography and wrapping behavior. */
+/* Mobile text baseline: descriptions/body copy use the full width of their existing content area.
+   Headings/titles are intentionally excluded. */
 @media(max-width:800px){
-  .subpage .service-panel{
-    width:100%!important;
-    max-width:none!important;
-    padding:22px 16px!important;
-  }
-  .about-page .mv-page-grid>div{
-    padding-left:16px!important;
-    padding-right:16px!important;
+  .subpage .sub-hero p:not(.kicker),
+  .subpage .section-head>p:not(.kicker),
+  .subpage .story p,
+  .subpage .simple-grid>div,
+  .subpage .service-panel p,
+  .subpage .bizfit-section>.wrap>p:not(.kicker),
+  .subpage .mv-page-grid p,
+  .subpage .operator-intro,
+  .subpage .operator-note,
+  .subpage .operator-career p,
+  .subpage .renew-contact p,
+  .contact-page .contact-example-list p{
+    width:100%;
+    max-width:none;
+    min-width:0;
+    white-space:normal;
+    text-wrap:wrap;
   }
 }
