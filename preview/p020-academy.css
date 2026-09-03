@@ -1,4 +1,4 @@
-/* P088 — Academy base + shared consistency + canonical site header. */
+/* P090 — Academy base + shared consistency + canonical site header. */
 @import url('./academy-p050-base.css');
 @import url('./p051-consistency.css?v=p073');
 @import url('./mobile-header.css?v=p066');
@@ -33,20 +33,24 @@ body.p003 #classes .class-card.preparing .status-inline{
   letter-spacing:normal!important;
 }
 
-/* Mobile width correction only. Do not alter line-breaking rules here. */
+/* Mobile text baseline: descriptions use the full width of their existing content area.
+   Headings/titles are intentionally excluded. */
 @media(max-width:800px){
-  body.p003 .change-card,
-  body.p003 .program,
-  body.p003 .reason{
-    padding-left:16px!important;
-    padding-right:16px!important;
-  }
-  body.p003 #classes .level-body{
-    padding-left:12px!important;
-    padding-right:12px!important;
-  }
-  body.p003 #classes .class-card{
-    padding-left:16px!important;
-    padding-right:16px!important;
+  body.p003 main .section-head>p:not(.kicker),
+  body.p003 .academy-renew-hero .wrap>div:first-child>p:not(.kicker),
+  body.p003 .need-item,
+  body.p003 .change-card p,
+  body.p003 .program p,
+  body.p003 .reason p,
+  body.p003 #classes .level-body>p,
+  body.p003 #classes .class-info span,
+  body.p003 details p,
+  body.p003 .voice-empty p,
+  body.p003 .academy-voice p{
+    width:100%;
+    max-width:none;
+    min-width:0;
+    white-space:normal;
+    text-wrap:wrap;
   }
 }
