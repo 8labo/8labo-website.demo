@@ -6,7 +6,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;color:var(--ink);background:#fff;font-family:'Noto Sans JP',system-ui,sans-serif;line-height:1.8;overflow-x:hidden}
+body{margin:0;color:var(--ink);background:#fff;font-family:'Noto Sans JP',system-ui,sans-serif;line-height:1.8;letter-spacing:.02em;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 button,input,select,textarea{font:inherit}
@@ -46,6 +46,15 @@ p{overflow-wrap:break-word}
 .cms-news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0 0 16px}
 .cms-news-card{min-height:0}
 .cms-news-image{height:150px;background-size:cover;background-position:center;border-radius:10px;margin:10px 0 16px}
+
+/* Render-parity calibration from the approved Academy page.
+   These are the actual winning legacy values after the old cascade, now owned explicitly. */
+.academy-page #needs.parent-needs{background:#d7e9f5}
+.academy-page #program.parent-needs{background:#edf5fa}
+.academy-page #faq.parent-needs{background:#d7e7f2}
+.academy-page #program-supervisor{background:#f2f6f9}
+.academy-page .section-head>p:not(.kicker),
+.academy-page .academy-renew-hero .wrap>div:first-child>p:not(.kicker){color:#667085}
 
 @media(max-width:800px){
   :root{--page-gutter:12px;--section-space:24px}
