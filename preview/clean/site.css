@@ -6,22 +6,23 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;color:var(--ink);background:#fff;font-family:'Noto Sans JP',system-ui,sans-serif;line-height:1.8;letter-spacing:.02em;overflow-x:hidden}
+body{margin:0;color:var(--ink);background:#fff;font-family:'Noto Sans JP',sans-serif;line-height:1.8;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 button,input,select,textarea{font:inherit}
 .wrap{width:min(var(--site-max),calc(100% - (var(--page-gutter) * 2)));margin-inline:auto;min-width:0}
 main,main section,main .wrap,main p,main h1,main h2,main h3{min-width:0;box-sizing:border-box}
 section{padding-block:var(--section-space)}
-.kicker{margin:0 0 8px;color:var(--blue);font-size:12px;font-weight:800;line-height:1.4;letter-spacing:.16em}
-h1,h2,h3{margin-top:0;letter-spacing:-.025em}
+.kicker{margin:0 0 14px;color:var(--blue);font-size:.7rem;font-weight:800;line-height:1.4;letter-spacing:.17em}
+h1,h2,h3{margin-top:0;line-height:1.35;letter-spacing:-.025em}
 p{overflow-wrap:break-word}
 .section-head{margin-bottom:24px}
+.section-head>.kicker{margin-bottom:8px;font-size:12px;line-height:1.4;letter-spacing:.16em}
 .section-head>p:last-child{width:100%;max-width:none;margin:0;color:var(--muted);font-size:15px;line-height:1.9}
 
 /* Canonical header: matches the approved stable state on both desktop and mobile. */
 .site-header{height:64px;padding:0 max(20px,calc((100vw - var(--site-max))/2));display:flex;align-items:center;justify-content:space-between;background:#0a0a0a;color:#fff;border-bottom:1px solid rgba(255,255,255,.12);position:relative;z-index:1000;isolation:isolate}
-.brand{margin:0;padding:0;font-size:24px;font-weight:900;line-height:24px;letter-spacing:.08em;color:#fff}
+.brand{margin:0;padding:0;font-family:'Noto Sans JP',sans-serif;font-size:24px;font-weight:900;line-height:24px;letter-spacing:.08em;color:#fff}
 .menu-button{display:none;margin:0;padding:0;border:0;background:transparent;color:#fff;font-size:14px;font-weight:800;line-height:1;letter-spacing:.12em;cursor:pointer}
 .global-nav{display:flex;align-items:center;gap:28px;position:static;width:auto;margin:0;padding:0;background:transparent;border:0;box-shadow:none;font-size:.76rem;font-weight:700;letter-spacing:.08em}
 .global-nav a{display:block;width:auto;margin:0;padding:0;border:0;color:#fff;font-size:.76rem;font-weight:700;line-height:1.35;letter-spacing:.08em;opacity:.88;white-space:nowrap}
@@ -47,8 +48,7 @@ p{overflow-wrap:break-word}
 .cms-news-card{min-height:0}
 .cms-news-image{height:150px;background-size:cover;background-position:center;border-radius:10px;margin:10px 0 16px}
 
-/* Render-parity calibration from the approved Academy page.
-   These are the actual winning legacy values after the old cascade, now owned explicitly. */
+/* Render-parity calibration from the approved Academy page. */
 .academy-page #needs.parent-needs{background:#d7e9f5}
 .academy-page #program.parent-needs{background:#edf5fa}
 .academy-page #faq.parent-needs{background:#d7e7f2}
@@ -61,8 +61,8 @@ p{overflow-wrap:break-word}
   .wrap{width:calc(100% - 24px);margin-inline:12px}
   section{padding-block:var(--section-space)}
   .section-head{margin-bottom:14px}
+  .section-head>.kicker{margin-bottom:5px;font-size:10px;line-height:1.35;letter-spacing:.15em}
   .section-head>p:last-child{font-size:14px;line-height:1.75;letter-spacing:0}
-  .kicker{margin-bottom:5px;font-size:10px;line-height:1.35;letter-spacing:.15em}
   .site-header{height:64px;padding:0 20px}
   .brand{font-size:24px;line-height:24px}
   .menu-button{display:block}
