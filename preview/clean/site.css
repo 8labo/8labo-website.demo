@@ -13,7 +13,7 @@ button,input,select,textarea{font:inherit}
 .wrap{width:min(var(--site-max),calc(100% - (var(--page-gutter) * 2)));margin-inline:auto;min-width:0}
 main,main section,main .wrap,main p,main h1,main h2,main h3{min-width:0;box-sizing:border-box}
 section{padding-block:var(--section-space)}
-.kicker{margin:0 0 14px;color:var(--blue);font-size:.7rem;font-weight:800;line-height:1.4;letter-spacing:.17em}
+.kicker{margin:0 0 14px;color:var(--blue);font-size:.7rem;font-weight:800;line-height:1.8;letter-spacing:.17em}
 h1,h2,h3{margin-top:0;line-height:1.35;letter-spacing:-.025em}
 p{overflow-wrap:break-word}
 .section-head{margin-bottom:24px}
@@ -53,8 +53,9 @@ p{overflow-wrap:break-word}
 .academy-page #program.parent-needs{background:#edf5fa}
 .academy-page #faq.parent-needs{background:#d7e7f2}
 .academy-page #program-supervisor{background:#f2f6f9}
-.academy-page .section-head>p:not(.kicker),
-.academy-page .academy-renew-hero .wrap>div:first-child>p:not(.kicker){color:#667085}
+.academy-page.academy-page .section-head>p:not(.kicker),
+.academy-page.academy-page .academy-renew-hero .wrap>div:first-child>p:not(.kicker){color:#667085}
+.academy-page.academy-page .academy-renew-hero .kicker{margin-bottom:14px;font-size:12px;line-height:1.8;letter-spacing:.16em}
 
 @media(max-width:800px){
   :root{--page-gutter:12px;--section-space:24px}
@@ -80,4 +81,5 @@ p{overflow-wrap:break-word}
   .cms-photo{background-position:var(--cms-mx,50%) var(--cms-my,50%)}
   .cms-news-grid{grid-template-columns:1fr}
   .cms-news-image{height:190px}
+  .academy-page.academy-page .academy-renew-hero .kicker{margin-bottom:5px;font-size:10px;line-height:1.35;letter-spacing:.15em}
 }
