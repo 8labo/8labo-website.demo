@@ -1,6 +1,14 @@
 // 8LABO clean shared JavaScript.
 // Responsibilities: navigation + CMS content only. No layout CSS injection and no copy/line-break rewriting.
 
+// The approved stable site loaded Noto Sans JP at 400/500/600/700/900.
+// Rebuild pages initially requested 800 as well, which changes glyph metrics/weight rendering.
+// Normalize the font request so the rebuilt pages use the same font faces as the stable render.
+document.querySelectorAll('link[href*="fonts.googleapis.com/css2?family=Noto+Sans+JP"]').forEach(link=>{
+  const stableFont='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&display=swap';
+  if(link.href!==stableFont)link.href=stableFont;
+});
+
 const menuButton=document.querySelector('.menu-button');
 const nav=document.querySelector('.global-nav');
 if(menuButton&&nav){
@@ -44,10 +52,13 @@ function setPhoto(element,row){
   element.classList.remove('cms-photo-empty');
   element.classList.add('cms-photo');
   element.style.backgroundImage=`linear-gradient(rgba(4,18,35,.08),rgba(4,18,35,.08)),url("${url}")`;
+  element.style.backgroundRepeat='no-repeat';
   element.style.setProperty('--cms-dx',(row.desktop_position_x??50)+'%');
   element.style.setProperty('--cms-dy',(row.desktop_position_y??50)+'%');
+  element.style.setProperty('--cms-dz',Number(row.desktop_zoom??1));
   element.style.setProperty('--cms-mx',(row.mobile_position_x??50)+'%');
   element.style.setProperty('--cms-my',(row.mobile_position_y??50)+'%');
+  element.style.setProperty('--cms-mz',Number(row.mobile_zoom??1));
   const brightness=Math.max(50,Math.min(200,Number(row.image_brightness??100)));
   element.style.filter=`brightness(${brightness}%)`;
 }
