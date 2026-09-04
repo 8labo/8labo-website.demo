@@ -1,12 +1,21 @@
-/* P090 — secondary pages use the same font source and typography scale as Home / Academy. */
+/* P092 — secondary pages use the same font source and typography scale as Home / Academy. */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap');
-@import url('./subpages-p049-base.css');
+@import url('./subpages-p049-base.css?v=p092');
 @import url('./p051-consistency.css?v=p073');
 @import url('./subpages-academy-align.css');
 @import url('./mobile-header.css?v=p066');
 @import url('./subpages-typography-p067.css?v=p068');
 @import url('./subpages-label-contract-p069.css?v=p074');
 @import url('./header-p071.css?v=p073');
+
+/* Desktop hero descriptions use the standard page width on these pages. */
+@media(min-width:801px){
+  .adults-page .sub-hero p:last-child,
+  .contact-page .sub-hero p:last-child{
+    width:100%;
+    max-width:none;
+  }
+}
 
 /* Mobile text baseline: descriptions/body copy use the full width of their existing content area.
    Headings/titles are intentionally excluded. */
