@@ -1,12 +1,16 @@
-/* P091 — home base + shared consistency + canonical site header. */
-@import url('./home-p051-base.css');
+/* P092 — home base + shared consistency + canonical site header. */
+@import url('./home-p051-base.css?v=p092');
 @import url('./p051-consistency.css?v=p073');
 @import url('./mobile-header.css?v=p066');
 @import url('./header-p071.css?v=p073');
 
 /* Home hero heading is owned here, not by generic text wrapping. */
+.home-page .home-hero h1{
+  font-size:clamp(40px,3vw,48px);
+}
 .home-page .home-hero h1 .home-hero-line{
   display:block;
+  white-space:nowrap;
 }
 
 /* Mobile text baseline:
